@@ -15,9 +15,7 @@ const SubjectClasses = () => {
                 <p className="text-sm text-pro-darkgray">These supplementary classes will help you to learn, understand and practice topics that you need more help in.</p>
             </div>
             <div className="w-full py-5 grid grid-cols-3 gap-5">
-                <ClassCard />
-                <ClassCard />
-                <ClassCard />
+               { Array(3).fill('').map((val, index) => <ClassCard key={index} index={index} />)}
             </div>
             <div className="w-full py-5 grid grid-cols-3 gap-5">
                 <RewardCard />

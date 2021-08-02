@@ -63,6 +63,7 @@ const Overview = ({tasks, quote, summary, rewards}) => {
                             taskData.map((item, idx) => 
                             <TaskCard 
                                 key={idx} 
+                                index={idx}
                                 clicked={!item.completed ? () => setActive(item.subject) : () => {return;}}
                                 subject={item.subject}
                                 estTime={item.estTime}
@@ -109,17 +110,77 @@ const Overview = ({tasks, quote, summary, rewards}) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   
-    const tasks = await api.get('/task/pending').then((res) => res.data);
-    const quote = await api.get('/home/quote').then((res) => res.data);
-    const summary = await api.get('/path/summary').then((res) => res.data);
-    const rewards = await api.get('/reward/earned').then((res) => res.data);
+    // const tasks = await api.get('/task/pending').then((res) => res.data);
+    const tasks = [
+        {
+            subject: 'Literature',
+            estTime: 40,
+            description: 'Lorem ipsum akdjfk adjkjka djfkldj djdkl ddjdkl',
+            completed: false,
+        },
+        {
+            subject: 'Mathmatics',
+            estTime: 40,
+            description: 'Lorem ipsum akdjfk adjkjka djfkldj djdkl ddjdkl',
+            completed: false,
+        },
+        {
+            subject: 'Physics',
+            estTime: 40,
+            description: 'Lorem ipsum akdjfk adjkjka djfkldj djdkl ddjdkl',
+            completed: false,
+        },
+        {
+            subject: 'Chemistry',
+            estTime: 40,
+            description: 'Lorem ipsum akdjfk adjkjka djfkldj djdkl ddjdkl',
+            completed: false,
+        },
+    ];
+    // const quote = await api.get('/home/quote').then((res) => res.data);
+    // const summary = await api.get('/path/summary').then((res) => res.data);
+    // const rewards = await api.get('/reward/earned').then((res) => res.data);
+
+    const summary = {
+        days_to_next_exam: 40, 
+        days_to_holiday: 8, 
+        tasks: 4,
+        lessons_taken: 2, 
+        time_spent: 150, 
+        rewards_earned: 5
+      };
+    
+      const rewards = [
+        {
+          name: 'Early access the name of the blank.',
+          used: false,
+        },
+        {
+          name: 'Early access the name of the blank.',
+          used: true,
+        },
+        {
+          name: 'Early access the name of the blank.',
+          used: true,
+        },
+        {
+          name: 'Early access the name of the blank.',
+          used: true,
+        },
+        {
+          name: 'Early access the name of the blank.',
+          used: true,
+        },
+      ];
    
     return {
       props: {
-        tasks: tasks.data,
-        quote: quote.data,
-        summary: summary.data,
-        rewards: rewards.data
+        tasks,
+        quote: 'This is the quote of the day.',
+        // summary: summary.data,
+        // rewards: rewards.data
+        summary,
+        rewards
       }
     }
   };

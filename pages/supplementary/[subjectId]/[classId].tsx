@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { BsPlayFill } from 'react-icons/bs';
 import {useTimer} from 'use-timer';
+import { gradColPallate } from '../../../colorPallate';
 import Fraction from '../../../component/Supplement/Fraction';
 
 
@@ -42,7 +43,7 @@ const ClassTest = () => {
                 </h1>
                 <div className="flex h-full items-center">
                     <div className="w-36">
-                        <h1 className="text-5xl font-medium bg-clip-text bg-gradient-to-r from-pro-blue to-pro-lightblue text-transparent">
+                        <h1 className={`text-5xl font-medium bg-clip-text bg-gradient-to-r text-transparent ${minutes < 6 ? gradColPallate[1] : minutes < 1 ? gradColPallate[2] : gradColPallate[0]}`}>
                             {`${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`}
                         </h1>
                     </div>

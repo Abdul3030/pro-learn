@@ -1,7 +1,9 @@
 import * as React from 'react';
 import Image from 'next/image';
+import { gradColPallate } from '../../../colorPallate';
 
 type TaskCardProps = {
+    index: number,
     completed: boolean,
     active?: boolean,
     subject: string,
@@ -10,7 +12,7 @@ type TaskCardProps = {
     clicked: () => void,
 };
 
-const TaskCard = ({completed, active, subject, estTime, description, clicked}: TaskCardProps) => {
+const TaskCard = ({index, completed, active, subject, estTime, description, clicked}: TaskCardProps) => {
 
 return (
     <div onClick={clicked} className={`relative ${completed ? '' : 'cursor-pointer'}  group w-full h-36 flex flex-col justify-between overflow-hidden p-5 shadow-pro rounded`}>
@@ -18,7 +20,7 @@ return (
         <div className="w-full">
             <h1 className="flex items-center">
                 <p className="text-pro-darkgray font-medium">{subject}</p> 
-                <div className="ml-2 w-3 h-3 rounded-full bg-gradient-to-r from-pro-red to-pro-orange"></div></h1>
+                <div className={`ml-2 w-3 h-3 rounded-full bg-gradient-to-r ${gradColPallate[index]}`}></div></h1>
             <h4 className="text-pro-gray text-sm">Estimated Time: {estTime}</h4>
         </div>
         <p className="text-pro-gray text-xs">
