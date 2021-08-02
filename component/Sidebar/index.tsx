@@ -18,17 +18,17 @@ const itemData:itemDataType[] = [
     {
     name: 'Caroline',
     icon: <FaRegUser />,
-    url: '/user'
+    url: '/'
     },
     {
     name: 'Lesson Plan',
     icon: <RiBook2Line />,
-    url: '/lesson'
+    url: '/overview'
     },
     {
     name: 'Supplementary Classes',
     icon: <BiBookAdd />,
-    url: '/supple'
+    url: '/supplementary'
     },
     {
     name: 'Settings',
@@ -40,7 +40,7 @@ const itemData:itemDataType[] = [
 const Sidebar = () => {
 
 return (
-    <div className="w-23 min-h-screen max-h-screen shadow-2xl">
+    <div className="w-23 min-h-screen max-h-screen shadow-right z-50">
         <div className="w-full h-20 flex justify-center items-center py-5">
             <Image src="/logo.png" width="47" height="47" alt="Logo" />
         </div>
