@@ -1,0 +1,22 @@
+@import 'react-modern-calendar-datepicker/lib/DatePicker.css';
+
+.custom-today {
+    background: #387EE9;
+    color: #fff !important;
+}
+
+.custom-today::after {
+    visibility: hidden;
+}
+
+.Calendar__monthArrowWrapper {
+    visibility: hidden !important;
+}
+
+.Calendar__yearText {
+    display: none !important;
+}
+
+abbr[title] {
+    text-decoration: none !important;
+}

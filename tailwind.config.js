@@ -13,8 +13,8 @@ module.exports = {
           'orange': '#FBB03B',
           'lightblue': '#37A0F6',
           'blue': '#387EE9',
-          'green': '#FFFF7E',
-          'spring': '#00A8C5',
+          'green': '#00A8C5',
+          'spring': '#FFFF7E',
           'pink': '#E7077A'
         }
       },
