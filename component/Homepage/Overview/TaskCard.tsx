@@ -21,7 +21,7 @@ return (
             <h1 className="flex items-center">
                 <p className="text-pro-darkgray font-medium">{subject}</p> 
                 <div className={`ml-2 w-3 h-3 rounded-full bg-gradient-to-r ${gradColPallate[index]}`}></div></h1>
-            <h4 className="text-pro-gray text-sm">Estimated Time: {estTime}</h4>
+            <h4 className="text-pro-gray text-sm">Estimated Time: {estTime}mins</h4>
         </div>
         <p className="text-pro-gray text-xs">
             {description}

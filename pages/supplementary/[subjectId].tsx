@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router';
 import * as React from 'react';
 import { BsPlayFill } from 'react-icons/bs';
 import ClassCard from '../../component/Supplement/ClassCard';
@@ -6,10 +7,10 @@ import RewardCard from '../../component/Supplement/RewardCard';
 
 
 const SubjectClasses = () => {
-
+    const router = useRouter();
     return (
         <div className="w-full px-10">
-            <h1 className="relative text-pro-gray font-medium py-2 cursor-pointer"><span className="absolute top-3  inline-block transform -rotate-180 -left-4"><BsPlayFill /></span> Mathmatics</h1>
+            <h1 onClick={() => router.back()} className="relative text-pro-gray font-medium py-2 cursor-pointer"><span className="absolute top-3  inline-block transform -rotate-180 -left-4"><BsPlayFill /></span> Mathmatics</h1>
             <div className="">
                 <h1 className="relative text-2xl font-medium text-pro-darkgray">Supplementary Classes</h1>
                 <p className="text-sm text-pro-darkgray">These supplementary classes will help you to learn, understand and practice topics that you need more help in.</p>

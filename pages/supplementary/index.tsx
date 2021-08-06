@@ -82,45 +82,13 @@ const Supplementary = ({summary, rewards}) => {
 };
 export const getServerSideProps: GetServerSideProps = async () => {
   
-//   const summary = await api.get('/path/summary').then((res) => res.data);
-const summary = {
-    days_to_next_exam: 40, 
-    days_to_holiday: 8, 
-    tasks: 4,
-    lessons_taken: 2, 
-    time_spent: 150, 
-    rewards_earned: 5
-  }
-  // const rewards = await api.get('/reward/earned').then((res) => res.data);
+  const summary = await api.get('/path/summary').then((res) => res.data.data);
 
-  const rewards = [
-    {
-      name: 'Early access the name of the blank.',
-      used: false,
-    },
-    {
-      name: 'Early access the name of the blank.',
-      used: true,
-    },
-    {
-      name: 'Early access the name of the blank.',
-      used: true,
-    },
-    {
-      name: 'Early access the name of the blank.',
-      used: true,
-    },
-    {
-      name: 'Early access the name of the blank.',
-      used: true,
-    },
-  ];
+  const rewards = await api.get('/reward/earned').then((res) => res.data.data);
 
- 
+  
   return {
     props: {
-    //   summary: summary.data,
-    //   rewards: rewards.data
         summary,
         rewards
     }
