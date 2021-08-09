@@ -13,22 +13,24 @@ import Recommended from '../component/Homepage/Recommend';
 import McQuestion from '../component/Homepage/Overview/McQuestion';
 import Quote from '../component/Homepage/Quote';
 import McqTest from '../component/Homepage/Overview/McqTest';
+import { useRouter } from 'next/dist/client/router';
 
 
 
 const Overview = ({tasks, quote, summary, rewards}) => {
     console.log(summary);
+    const router = useRouter();
     const [active , setActive] = React.useState('');
 
 
     return (
         <div className="w-full">
             <div className="w-full flex">
-                <div className={`${active ? 'w-1/3' : 'w-2/3'} relative height max-h-full scrollbar-thumb-rounded-full overflow-y-auto scrollbar-thin scrollbar-thumb-pro-scroll scrollbar-track-gray-100`} >
+                <div className={`${active ? 'w-1/3' : 'w-2/3'} relative inline-block height max-h-full scrollbar-thumb-rounded-full overflow-y-auto scrollbar-thin scrollbar-thumb-pro-scroll scrollbar-track-gray-100`} >
                     <div className="w-full bg-white z-40 pl-5 sticky top-0 left-0">
-                        <div className="w-full py-2">
-                            <h1 className="relative text-gray-700 text-base font-medium cursor-pointer"> <span className="absolute top-1  inline-block transform -rotate-180 -left-4"><BsPlayFill /></span> Overview</h1>
-                            <h2 className="text-sm text-gray-500">Todays Tasks</h2>
+                        <div className="w-full py-2 text-sm font-medium">
+                            <h1 onClick={() => router.push('/')} className="relative text-pro-lightgray cursor-pointer"> <span className="absolute top-1  inline-block transform -rotate-180 -left-4"><BsPlayFill /></span> Overview</h1>
+                            <h2 className="text-pro-darkgray">{`Today's Tasks`}</h2>
                         </div>
                     </div>
                     <div className={`pr-5 grid gap-5 pl-5 ${active ? 'grid-cols-1' : 'grid-cols-2'}   py-2 `}>

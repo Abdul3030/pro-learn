@@ -8,15 +8,15 @@ const RewardItem = ({name, used}: RewardItemProps) => {
 
 
     return (
-    <div className={`w-full h-10 flex items-center justify-between px-2 py-5 mb-5 rounded shadow-pro ${used ? 'opacity-30' : 'opacity-100'}`}>
+    <div className={`w-full h-10 cursor-pointer flex items-center justify-between px-2 py-5 mb-5 rounded shadow-pro ${used ? 'opacity-30' : 'opacity-100'}`}>
         <div className="px-5 text-pro-gray w-full flex justify-between items-center">
             <i className="text-xl">
              <FiGift />
             </i>
-            <h2 className="flex-1 pl-3 font-medium text-xs text-left">
+            <h2 className="flex-1 pl-3 font-medium text-xsm text-left">
                 {name}
             </h2>
-            <p className={`uppercase bg-clip-text font-semibold text-xs text-transparent inline-block bg-gradient-to-r from-pro-red to-pro-orange ${used ? 'invisible' : 'visible'}`}>New</p>
+            <p className={`uppercase bg-clip-text font-medium text-xss text-transparent inline-block bg-gradient-to-r from-pro-red to-pro-orange ${used ? 'invisible' : 'visible'}`}>New</p>
         </div>
      </div>
     )

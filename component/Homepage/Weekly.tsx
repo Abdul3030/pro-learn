@@ -26,23 +26,23 @@ const Weekly = ({data}: WeeklyProps) => {
        timeSpent = `${time_spent}m`
     }
 return (
-    <div className="w-full">
-        <h1 className="text-gray-700 text-sm font-medium py-2">Weekly</h1>
-        <div className="w-full h-32 flex text-gray-400 items-center justify-between px-2 py-5 rounded shadow-pro">
-           <div className="w-full px-2 ">
+    <div className="w-full font-medium">
+        <h1 className="text-pro-darkgray text-sm font-medium py-2">Weekly</h1>
+        <div className="w-full h-32 flex text-pro-lightgray items-center justify-between px-7 py-4 rounded shadow-pro">
+           <div className="">
                <i className="text-2xl"><FaGraduationCap /></i>
-               <h3 className="text-sm">Lesson taken</h3>
-               <h1 className="bg-clip-text font-medium text-2xl text-transparent inline-block bg-gradient-to-r from-pro-blue to-pro-lightblue">{lessons_taken}</h1>
+               <h3 className="text-xss">Lesson taken</h3>
+               <h1 className="bg-clip-text  text-xl text-transparent inline-block bg-gradient-to-r from-pro-blue to-pro-lightblue">{lessons_taken}</h1>
            </div>
-           <div className="w-full px-1">
+           <div className="">
                <i className="text-2xl"><BiTimeFive/></i>
-               <h3 className="text-sm">Time spent</h3>
-               <h1 className="text- bg-clip-text font-medium  text-2xl text-transparent inline-block bg-gradient-to-r from-pro-orange to-pro-lightorange">{timeSpent}</h1>
+               <h3 className="text-xss">Time spent</h3>
+               <h1 className="text- bg-clip-text   text-xl text-transparent inline-block bg-gradient-to-r from-pro-orange to-pro-lightorange">{timeSpent}</h1>
            </div>
-           <div className="w-full px-2">
+           <div className="">
                <i className="text-2xl"><FiGift /></i>
-               <h3 className="text-sm">Rewards</h3>
-               <h1 className="bg-clip-text font-medium  text-2xl text-transparent inline-block bg-gradient-to-r from-pro-red to-pro-darkorange">{rewards_earned}</h1>
+               <h3 className="text-xss">Rewards</h3>
+               <h1 className="bg-clip-text text-xl text-transparent inline-block bg-gradient-to-r from-pro-red to-pro-darkorange">{rewards_earned}</h1>
            </div>
         </div>
     </div>

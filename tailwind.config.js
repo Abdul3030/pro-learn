@@ -27,6 +27,7 @@ module.exports = {
         }
       },
       spacing: {
+        '5px': '0.3125rem',
         '15': '3.75rem',
         '23': '5.625rem',
         '25': '6.25rem',
@@ -42,8 +43,10 @@ module.exports = {
         'width':'width',
       },
       fontSize: {
+        'xsm': '0.6875rem',
         'xss': '0.625rem',
-        'xxss': '0.5625rem'
+        'xxss': '0.5625rem',
+        '4-5xl': '2.5rem',
       }
     },
   },

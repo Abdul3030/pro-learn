@@ -26,7 +26,7 @@ const CalendarComponent = ({setDate}) => {
 
 return (
     <div className="w-full h-full mt-7">
-        <h1 className="text-gray-700 text-sm font-medium py-2">Calendar</h1>
+        <h1 className="text-pro-darkgray text-sm font-medium py-2">Calendar</h1>
         <div className="w-full h-72 rounded shadow-pro">
             <div className="w-full">
                 <h1 className="w-full text-center font-medium text-pro-darkgray py-3">{moment.format('MMMM')}</h1>
@@ -46,7 +46,7 @@ return (
                                <div
                                 onClick={() => setDate(day.format('D MMM'))} 
                                 key={index} 
-                                className={`w-5 p-4 h-5 mt-1 text-xs font-medium flex justify-center items-center rounded-full cursor-pointer ${day.format('D/M') === today ? 'bg-gradient-to-br from-pro-blue to-pro-lightblue text-white' : day.format('M') !== thisMonth ? 'text-pro-lightgray' : 'text-pro-gray hover:bg-pro-lightblue hover:text-white'} `}>
+                                className={`w-5 p-4 h-5 mt-1 text-xs font-medium flex justify-center items-center rounded-full cursor-pointer ${day.format('D/M') === today ? 'bg-gradient-to-br from-pro-blue to-pro-lightblue text-white' : day.format('M') !== thisMonth ? 'text-pro-white' : 'text-pro-darkgray hover:bg-pro-lightblue hover:text-white'} `}>
                                    {day.format('D')}
                                 </div>
                            ))

@@ -11,8 +11,8 @@ const Rewards = ({rewards}: RewardsProps) => {
 
 return (
     <div className="w-full mt-7">
-        <div className="w-full flex items-center py-2">
-            <h1 className="text-gray-700 text-sm font-medium">Rewards</h1>
+        <div className="w-full flex items-center py-3">
+            <h1 className="text-pro-darkgray text-sm font-medium">Rewards</h1>
             <Link href="#" ><a className="text-xs text-pro-lightgray px-1 flex items-center">See all <BsPlayFill /></a></Link>
         </div>
         {
