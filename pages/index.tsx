@@ -12,6 +12,7 @@ import api from '../axios';
 export default function Home({summary, rewards}) {
   const today = momentjs().format('D MMM')
   const [date, setDate] = React.useState(today);
+  // Updated Build version
   return (
     <div className="w-full height z-0">
       <div className="w-full flex justify-center">

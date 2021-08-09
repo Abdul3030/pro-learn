@@ -4,12 +4,12 @@ import Sidebar from './Sidebar';
 
 
 type LayoutProps = {
-    children: React.ReactNode
+    children: React.ReactNode;
 };
 
 const Layout = ({children}: LayoutProps) => {
     const router = useRouter();
-    if(router.pathname.includes('/login')) return children;
+    if(router.pathname.includes('/login')) return <div>{children}</div>;
 return (
     <div className="w-full flex max-h-screen min-h-screen overflow-hidden">
         <Sidebar />
