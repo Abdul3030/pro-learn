@@ -25,7 +25,7 @@ const CalendarComponent = ({setDate}) => {
 
 
 return (
-    <div className="w-full h-full mt-2">
+    <div className="w-full h-full mt-7">
         <h1 className="text-gray-700 text-sm font-medium py-2">Calendar</h1>
         <div className="w-full h-72 rounded shadow-pro">
             <div className="w-full">

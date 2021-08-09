@@ -22,11 +22,16 @@ module.exports = {
           'darkgray': '#364658',
           'lightgray': '#A5BAD0',
           'white': '#DEE5ED',
+          'background': '#387EE9',
           'scroll': '#C4C4C4'
         }
       },
       spacing: {
-        '23': '5.625rem'
+        '15': '3.75rem',
+        '23': '5.625rem',
+        '25': '6.25rem',
+        '75': '18.75rem',
+        '104': '26rem'
       },
       boxShadow: {
         pro: '0px 5px 10px rgba(0, 0, 0, 0.15)',
@@ -35,6 +40,10 @@ module.exports = {
       },
       transitionProperty: {
         'width':'width',
+      },
+      fontSize: {
+        'xss': '0.625rem',
+        'xxss': '0.5625rem'
       }
     },
   },

@@ -8,7 +8,7 @@ type HappenedProps = {
 const Happened = ({date}: HappenedProps) => {
     const today = momentjs().format('D MMM');
 return (
-    <div className="w-40 h-full mt-2">
+    <div className="w-40 h-full mt-7">
     <h1 className="text-gray-700 text-sm font-medium py-2">What&apos;s happening</h1>
     <div className="w-full h-72 rounded shadow-pro">
         <div className="overflow-hidden w-full h-12 text-center bg-gradient-to-r from-pro-blue to-pro-lightblue ">

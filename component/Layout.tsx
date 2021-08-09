@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router';
 import * as React from 'react';
 import Sidebar from './Sidebar';
 
@@ -7,11 +8,12 @@ type LayoutProps = {
 };
 
 const Layout = ({children}: LayoutProps) => {
-
+    const router = useRouter();
+    if(router.pathname.includes('/login')) return children;
 return (
     <div className="w-full flex max-h-screen min-h-screen overflow-hidden">
         <Sidebar />
-        <div className="w-full h-full">
+        <div className="w-full h-full background-color">
             <div className="w-full h-20 inner-shadow"></div>
             <div className="main-body">
                 {children}
@@ -26,6 +28,9 @@ return (
 
         .main-body {
             max-height: calc(100vh - 80px);
+        }
+        .background-color {
+            background: #F8FAFC;
         }
         `}</style>
     </div>
