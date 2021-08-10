@@ -29,7 +29,7 @@ const Overview = ({tasks, quote, summary, rewards}) => {
                 <div className={`${active ? 'w-1/3' : 'w-2/3'} relative inline-block height max-h-full scrollbar-thumb-rounded-full overflow-y-auto scrollbar-thin scrollbar-thumb-pro-scroll scrollbar-track-gray-100`} >
                     <div className="w-full bg-white z-40 pl-5 sticky top-0 left-0">
                         <div className="w-full py-2 text-sm font-medium">
-                            <h1 onClick={() => router.push('/')} className="relative text-pro-lightgray cursor-pointer"> <span className="absolute top-1  inline-block transform -rotate-180 -left-4"><BsPlayFill /></span> Overview</h1>
+                            <h1 onClick={() => router.push('/')} className="relative text-pro-lightgray cursor-pointer"> <span className="absolute top-0.5  inline-block transform -rotate-180 -left-4"><BsPlayFill /></span> Overview</h1>
                             <h2 className="text-pro-darkgray">{`Today's Tasks`}</h2>
                         </div>
                     </div>

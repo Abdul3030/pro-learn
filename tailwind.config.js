@@ -47,6 +47,9 @@ module.exports = {
         'xss': '0.625rem',
         'xxss': '0.5625rem',
         '4-5xl': '2.5rem',
+      },
+      borderRadius: {
+        'uppersm': '0.1875rem',
       }
     },
   },
