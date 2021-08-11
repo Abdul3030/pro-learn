@@ -15,7 +15,7 @@ type TaskCardProps = {
 const TaskCard = ({index, completed, active, subject, estTime, description, clicked}: TaskCardProps) => {
 
 return (
-    <div onClick={clicked} className={`relative ${completed ? '' : 'cursor-pointer'}  group w-full h-36 flex flex-col justify-between overflow-hidden p-5 shadow-pro rounded`}>
+    <div onClick={clicked} className={`relative ${completed ? '' : 'cursor-pointer'} bg-white  group w-full h-36 flex flex-col justify-between overflow-hidden p-5 shadow-pro rounded`}>
         <div className={`absolute ${completed ? '' : 'group-hover:block'} transform ${active ? 'block' : 'hidden'} transition-all duration-1000 ease-in-out w-5px h-full top-0 right-0 bg-pro-blue rounded-uppersm`}></div>
         <div className="w-full">
             <h1 className="flex items-center">

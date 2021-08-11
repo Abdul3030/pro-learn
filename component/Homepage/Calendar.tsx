@@ -27,7 +27,7 @@ const CalendarComponent = ({setDate}) => {
 return (
     <div className="w-full h-full mt-7">
         <h1 className="text-pro-darkgray text-sm font-medium py-2">Calendar</h1>
-        <div className="w-full h-72 rounded shadow-pro">
+        <div className="w-full h-72 rounded shadow-pro bg-white">
             <div className="w-full">
                 <h1 className="w-full text-center font-medium text-pro-darkgray py-3">{moment.format('MMMM')}</h1>
             </div>

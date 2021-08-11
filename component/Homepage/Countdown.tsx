@@ -11,7 +11,7 @@ const Countdown = ({}: CountdownProps) => {
 return (
     <div className="w-40">
         <h1 className="text-pro-darkgray text-sm font-medium py-2">Countdown</h1>
-        <div className="w-full h-40 flex justify-center items-center rounded shadow-pro">
+        <div className="bg-white w-full h-40 flex justify-center items-center rounded shadow-pro">
             <div className="w-36 h-32 flex justify-center items-center px-2">
                 <CircularProgressbarWithChildren 
                     value={62}
