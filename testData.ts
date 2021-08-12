@@ -258,11 +258,11 @@ export const data = [
   "name": "",
   "completed": false,
   "estimated_time": 30,
-  "type": "mcqs",
+  "type": "written",
   "questions": questionsData
   },
   {
-  "id": 232332,
+  "id": 792332,
   "name": "",
   "completed": false,
   "estimated_time": 30,
@@ -270,7 +270,7 @@ export const data = [
   "questions": questionsData
   },
   {
-  "id": 232332,
+  "id": 358943,
   "name": "",
   "completed": false,
   "estimated_time": 30,
@@ -278,11 +278,11 @@ export const data = [
   "questions": questionsData
   },
   {
-  "id": 232332,
+  "id": 602347,
   "name": "",
   "completed": false,
   "estimated_time": 30,
   "type": "mcqs",
-  "questions": questionsData
+  "questions": [...questionsData]
   },
 ];

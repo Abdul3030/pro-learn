@@ -18,7 +18,7 @@ const itemData:itemDataType[] = [
     {
     name: 'Caroline',
     icon: <FaRegUser />,
-    url: '/'
+    url: '/home'
     },
     {
     name: 'Lesson Plan',

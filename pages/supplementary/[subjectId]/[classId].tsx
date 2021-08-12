@@ -44,15 +44,15 @@ const ClassTest = () => {
 
     return (
 
-        <div className="relative w-full scrollable px-10 overflow-y-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-pro-scroll ">
-            <div className="w-full sticky top-0">
-                <h1 onClick={() => router.back() } className="relative inline-block text-base text-pro-gray font-medium py-2 cursor-pointer">
-                    <span className="absolute top-3  inline-block transform -rotate-180 -left-4">
+        <div className="relative w-full px-2 pt-1 select-none">
+            <div className="w-full px-8 h-25 bg-white">
+                <h1 onClick={() => router.back() } className="relative inline-block text-sm text-pro-lightgray font-medium cursor-pointer">
+                    <span className="absolute top-0.5  inline-block transform -rotate-180 -left-4">
                         <BsPlayFill />
                     </span>
                     Supplementary Classes
                 </h1>
-                <div className="flex h-full items-center">
+                <div className="flex pt-5 items-center">
                     <div className="w-36">
                         <h1 className={`text-5xl font-medium bg-clip-text bg-gradient-to-r text-transparent ${minutes < 6 && minutes >= 1 ? gradColPallate[1] : minutes < 1 ? gradColPallate[2] : gradColPallate[0]}`}>
                             {`${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`}
@@ -64,7 +64,7 @@ const ClassTest = () => {
                     </div>
                 </div>
             </div>
-            <form onSubmit={onSubmitHanlder} className="w-full">
+            <form onSubmit={onSubmitHanlder} className="w-full px-8 scrollable overflow-y-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-pro-scroll">
                 {
                     Array(10).fill('').map((item, idx) => <Fraction key={idx} />)
                 }
@@ -77,7 +77,7 @@ const ClassTest = () => {
             }
             <style jsx>{`
                 .scrollable {
-                    max-height: calc(100vh - 80px);
+                    max-height: calc(100vh - 180px);
                 }
             `}</style>
         </div>

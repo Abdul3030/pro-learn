@@ -9,7 +9,8 @@ type LayoutProps = {
 
 const Layout = ({children}: LayoutProps) => {
     const router = useRouter();
-    if(router.pathname.includes('/login')) return <div>{children}</div>;
+    console.log(router);
+    if(router.pathname === '/') return <div>{children}</div>;
 return (
     <div className="w-full flex max-h-screen min-h-screen overflow-hidden">
         <Sidebar />

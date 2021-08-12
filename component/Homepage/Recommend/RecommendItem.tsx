@@ -8,7 +8,7 @@ type RecommendedProps = {
 
 const RecommendItem = ({name, text, match}: RecommendedProps) => {
     return (
-        <div className="w-full h-36 py-5 pl-5 pr-2 flex rounded shadow-pro overflow-hidden">
+        <div className="bg-white w-full h-36 py-5 pl-5 pr-2 flex rounded shadow-pro overflow-hidden">
             <div className="w-2/3 mr-2 bg-pro-gray bg-opacity-50">
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MSYw502dJNY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>

@@ -5,7 +5,7 @@ import { FiGift } from 'react-icons/fi';
 const RewardCard = () => {
 
     return (
-        <div className="w-full p-5 flex items-center text-pro-darkgray shadow-pro rounded">
+        <div className="bg-white w-full p-5 flex items-center text-pro-darkgray shadow-pro rounded">
             <div className="text-4xl">
                 <FiGift />
             </div>

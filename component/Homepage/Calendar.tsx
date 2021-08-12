@@ -2,15 +2,14 @@ import * as React from 'react';
 import { Calendar } from 'react-modern-calendar-datepicker';
 import dayjs from 'dayjs';
 import momentjs from 'moment';
-import withRouter from 'next/dist/client/with-router';
 
-const CalendarComponent = ({setDate}) => {
+const CalendarComponent = ({setDate, selectedDay, idays}) => {
 
+    // Setting up the calendar
     const calendar = [];
     const moment = momentjs();
     const startDay = moment.clone().startOf('month').startOf('week');
     const endDay = moment.clone().endOf('month').endOf('week');
-    const today = momentjs().format('D/M');
     const thisMonth = moment.format('M');
 
     let day = startDay.clone().subtract(1, 'day');
@@ -23,9 +22,10 @@ const CalendarComponent = ({setDate}) => {
         )
     };
 
-
+    
+console.log(selectedDay);
 return (
-    <div className="w-full h-full mt-7">
+    <div className="w-full h-full mt-7 select-none">
         <h1 className="text-pro-darkgray text-sm font-medium py-2">Calendar</h1>
         <div className="w-full h-72 rounded shadow-pro bg-white">
             <div className="w-full">
@@ -44,10 +44,20 @@ return (
                        {
                            week.map((day, index) => (
                                <div
-                                onClick={() => setDate(day.format('D MMM'))} 
+                                onClick={() => setDate(day.format('D/M'))} 
                                 key={index} 
-                                className={`w-5 p-4 h-5 mt-1 text-xs font-medium flex justify-center items-center rounded-full cursor-pointer ${day.format('D/M') === today ? 'bg-gradient-to-br from-pro-blue to-pro-lightblue text-white' : day.format('M') !== thisMonth ? 'text-pro-white' : 'text-pro-darkgray hover:bg-pro-lightblue hover:text-white'} `}>
+                                className={`group w-5 p-4 h-5 mt-1 text-xs font-medium flex justify-center items-center rounded-full cursor-pointer ${day.format('D/M') === selectedDay ? 'bg-gradient-to-br from-pro-blue to-pro-lightblue text-white' : day.format('M') !== thisMonth ? 'text-pro-white' : 'text-pro-darkgray hover:bg-pro-lightblue hover:text-white'} `}>
+                                   <div className="relative">
                                    {day.format('D')}
+                                   {
+                                       idays.map((item, idx) => {
+                                           if(item.date === day.format('D') && item.date !== momentjs(selectedDay, 'D/M').format('D')){
+                                               return <div className="absolute group-hover:hidden bottom-0 w-full h-0.5 bg-gradient-to-r from-pro-red to-pro-orange rounded-full"></div>
+                                           }
+                                       })
+                                   }
+                                   {/* <div className="absolute bottom-0 w-full h-0.5 bg-gradient-to-r from-pro-red to-pro-orange"></div> */}
+                                   </div>
                                 </div>
                            ))
                        }

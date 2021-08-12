@@ -13,7 +13,7 @@ const LiteratureTextbox = () => {
 
     return (
         <div className=" px-5 w-full h-full">
-            <h1 className="font-medium text-pro-darkgray">Literature</h1>
+            <h1 className="h-10 font-semibold text-pro-darkgray py-2">Literature</h1>
             <form action="" className="bg-white w-full h-full">
                 <div className="w-full my-5 rounded-md shadow-pro">
                     <textarea onChange={onChangeHanlder} value="Harper Lee’s was an American novelist widely known for To Kill a Mockingbird, published in 1960. Immediately

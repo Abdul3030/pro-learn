@@ -26,9 +26,9 @@ const Weekly = ({data}: WeeklyProps) => {
        timeSpent = `${time_spent}m`
     }
 return (
-    <div className="w-full font-medium">
+    <div className="w-full font-medium px-5">
         <h1 className="text-pro-darkgray text-sm font-medium py-2">Weekly</h1>
-        <div className="w-full h-32 flex text-pro-lightgray items-center justify-between px-7 py-4 rounded shadow-pro">
+        <div className="bg-white w-full h-32 flex text-pro-lightgray items-center justify-between px-7 py-4 rounded shadow-pro">
            <div className="">
                <i className="text-2xl"><FaGraduationCap /></i>
                <h3 className="text-xss">Lesson taken</h3>
