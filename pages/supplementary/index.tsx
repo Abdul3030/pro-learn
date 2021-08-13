@@ -13,7 +13,7 @@ const Supplementary = ({summary, rewards, subjects}) => {
         <div className="w-full h-full">
             <div className="w-full h-full">
                 <div className="w-full h-full flex">
-                    <div className="w-2/3 min-h-full  px-5 shadow-right">
+                    <div className="w-2/3 min-h-full pl-9  pr-10 shadow-right">
                         <h1 className="text-2xl text-pro-darkgray font-medium my-3">Subjects</h1>
                         <div className="w-full grid grid-cols-2 gap-5">
                             {
@@ -21,7 +21,7 @@ const Supplementary = ({summary, rewards, subjects}) => {
                             }
                         </div>
                     </div>
-                    <div className="w-1/3 h-full px-5">
+                    <div className="w-1/3 h-full pl-3 pr-5">
                         <Weekly data={summary} />
                         <Rewards rewards={rewards} />
                     </div>

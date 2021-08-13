@@ -1,28 +1,31 @@
 import * as React from 'react';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import Link from 'next/link';
 import { BsPlayFill } from 'react-icons/bs';
 import {useTimer} from 'use-timer';
 import { gradColPallate } from '../../../colorPallate';
 import Fraction from '../../../component/Supplement/Fraction';
-import { Router, useRouter } from 'next/dist/client/router';
 import { useState } from 'react';
 import Congratulation from '../../../component/Supplement/Congratulation';
 
 
 const ClassTest = () => {
     const router = useRouter();
+
     const [congrats, setCongrats] = useState(false);
+    const [showResults, setShowResults] = useState(false);
+    const submitRef = React.useRef(null);
     console.log(congrats);
     const { time, start, pause, reset, status } = useTimer({
         initialTime: 600,
         endTime: 0,
         timerType: 'DECREMENTAL',
         onTimeOver: () => {
-          start();
+          submitRef.current.click();
         },
       });
 
+    // onLoad the exam timer will be started
     useEffect(()=> {
         start();
     },[]);
@@ -37,10 +40,21 @@ const ClassTest = () => {
         minutes = Math.floor((time % hour) / minute);
         seconds = Math.floor((time % minute));
 
-
+    
     const onSubmitHanlder = (e) => {
         e.preventDefault();
+        pause();
+        setCongrats(true);
     };
+
+    // After 5 minutes of submitting result will be shown and congrats window disappeared
+    useEffect(()=> {
+        let timeout;
+        if(congrats){
+            timeout = setTimeout(() => {setShowResults(true); setCongrats(false);}, 3000);
+        }
+        return () => clearTimeout(timeout);
+    },[showResults, congrats]);
 
     return (
 
@@ -69,7 +83,7 @@ const ClassTest = () => {
                     Array(10).fill('').map((item, idx) => <Fraction key={idx} />)
                 }
                 <div className="w-full my-5 flex justify-center items-center text-white">
-                    <button onClick={() => setCongrats(true)} className="bg-gradient-to-br from-pro-blue to-pro-lightblue rounded-lg px-10 py-1" type="submit">Submit</button>
+                    <button ref={submitRef} className="bg-gradient-to-br from-pro-blue to-pro-lightblue rounded-lg px-10 py-1" type="submit">Submit</button>
                 </div>
             </form>
             {

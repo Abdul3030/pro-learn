@@ -17,7 +17,7 @@ return (
     <div className="w-full">
         <h1 className="text-pro-darkgray text-sm font-medium py-2">Summary</h1>
         <div className="bg-white w-full h-40 flex items-center text-xsm justify-between px-4 py-5 rounded shadow-pro">
-            <div onClick={() => router.push('/overview')} className="text-center px-2 cursor-pointer">
+            <div onClick={() => router.push('/home/tasks')} className="text-center px-2 cursor-pointer">
                 <h2 className="bg-clip-text font-medium text-5xl text-transparent inline-block bg-gradient-to-r from-pro-blue to-pro-lightblue">{tasks}</h2>
                 <p className="text-pro-darkgray">Task To Be Completed</p>
             </div>    

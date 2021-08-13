@@ -23,7 +23,7 @@ const itemData:itemDataType[] = [
     {
     name: 'Lesson Plan',
     icon: <RiBook2Line />,
-    url: '/overview'
+    url: '/lessonplan'
     },
     {
     name: 'Supplementary Classes',

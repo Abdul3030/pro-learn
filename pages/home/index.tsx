@@ -1,17 +1,14 @@
 import * as React from 'react';
 import momentjs from 'moment';
 import { GetServerSideProps } from 'next';
-import Calendar from "../component/Homepage/Calendar";
-import Countdown from "../component/Homepage/Countdown";
-import Happened from "../component/Homepage/Happened";
-import Rewards from "../component/Homepage/Rewards";
-import Summary from "../component/Homepage/Summary";
-import Weekly from "../component/Homepage/Weekly";
-import api from '../axios';
-import { useContext } from 'react';
+import Calendar from "../../component/Homepage/Calendar";
+import Countdown from "../../component/Homepage/Countdown";
+import Happened from "../../component/Homepage/Happened";
+import Rewards from "../../component/Homepage/Rewards";
+import Summary from "../../component/Homepage/Summary";
+import Weekly from "../../component/Homepage/Weekly";
+import api from '../../axios';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import { FiLoader } from 'react-icons/fi';
 
 export default function Home({summary, rewards}) {
   
@@ -63,7 +60,7 @@ export default function Home({summary, rewards}) {
   return (
     <div className="w-full height z-0">
       <div className="w-full flex justify-center">
-        <div className="w-2/3 py-2 pl-7 flex shadow-right">
+        <div className="w-2/3 py-2 pl-9 flex shadow-right">
           <div className="flex-grow pb-10">
             <Summary summary={summary} />
             <Calendar setDate={setDate} selectedDay={date} idays={idays} />
