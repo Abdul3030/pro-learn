@@ -1,7 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import * as React from 'react';
 import { GetServerSideProps } from 'next';
-import api from '../../axios'; 
+import api from '../../axios';
 import { BsPlayFill } from 'react-icons/bs';
 import ClassCard from '../../component/Supplement/ClassCard';
 import RewardCard from '../../component/Supplement/RewardCard';

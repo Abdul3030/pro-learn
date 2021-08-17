@@ -49,7 +49,7 @@ const testData = [
     {
         id: 458213,
         type: 'fragment',
-        question: '12/13+15/12',
+        question: '12/13-15/12',
         options: [
             '8/65',
             '3/12',
@@ -88,8 +88,7 @@ const ClassTest = () => {
         endTime: 0,
         timerType: 'DECREMENTAL',
         onTimeOver: () => {
-        submitRef.current.click();
-        // start();
+        start();
         },
       });
 
@@ -173,7 +172,7 @@ const ClassTest = () => {
                             <Form>
                                 
                                 {
-                                    testData.map( (item, idx) => <Fraction key={item.id} showResults={showResults} answer={item.answer} prevQId={idx > 0 ? testData[idx-1].id : null} values={values} name={item.id} options={item.options} />)
+                                    testData.map( (item, idx) => <Fraction key={item.id} showResults={showResults} question={item.question} answer={item.answer} prevQId={idx > 0 ? testData[idx-1].id : null} values={values} name={item.id} options={item.options} />)
                                 }
                                 {
                                 !showResults ?
