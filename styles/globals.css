@@ -5,12 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.customized-scrollbar::webkit-scrollbar {
-    width: 5px;
-    background: #A5BAD0;
-}
-
-.customized-scrollbar::webkit-scrollbar-thumb {
-    width: 5px;
-    background: red;
+body{
+    overflow: hidden;
 }

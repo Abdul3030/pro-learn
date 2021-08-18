@@ -43,7 +43,7 @@ const Overview = ({tasks, quote, summary, rewards}) => {
     );
     let testItem;
     if(data){
-        testItem = data.data.length > 0 && selectedTestData[0].type === "written" ? <LiteratureTextbox /> : <McqTest title={active} data={selectedTestData[0]} /> 
+        testItem = data.data.length > 0 && selectedTestData[0].type === "written" ? <LiteratureTextbox /> : <McqTest title={active} data={selectedTestData[0]} submitted={() => setActive('')} /> 
     }
     return (
         <div className="w-full">
@@ -79,7 +79,7 @@ const Overview = ({tasks, quote, summary, rewards}) => {
                         </div>
                     </div>
                 </div>
-                <div className={`${active ? 'w-2/3' : 'w-1/3'} transition-width duration-500 ease-in-out max-h-full pl-3 pr-4 py-2`}>
+                <div className={`${active ? 'w-2/3' : 'w-1/3'} transition-width duration-500 ease-in-out pl-3 pr-4 overflow-hidden`}>
                     
 
                     {
@@ -91,6 +91,9 @@ const Overview = ({tasks, quote, summary, rewards}) => {
             <style jsx>{`
             .height {
                 max-height: calc(100vh - 146px);
+            }
+            .ques-height {
+                max-height: calc(100vh - 80px)
             }
             `}</style>
         </div>
